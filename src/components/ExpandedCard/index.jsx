@@ -6,6 +6,7 @@ import './expandedCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ThemeContext } from '../../contexts/themeContext';
 import axios from 'axios';
+import propTypes from 'prop-types';
 export default function ExpandedCard(props) {
     const { theme } = React.useContext(ThemeContext);
     const [bookEvent, setBookEvent] = React.useState(props.details.isBookmarked);
@@ -49,10 +50,13 @@ export default function ExpandedCard(props) {
                          className={bookEvent ? 'bookmarked' : 'unbookmarked'}
                           />
                  </div>
-                {(registerEvent)? <div className='btn'>
-                        <button className='close-button' onClick={registerEventHandler} style={{color:theme.currTheme}}>UNREGISTER</button>
-                 </div>:null
-                }
+                 <div className='btn'>
+                        <button className='close-button' onClick={registerEventHandler} style={{color:theme.currTheme}}>{(registerEvent)? "UNREGISTER":"REGISTER"}</button>
+                 </div>
       </div>
     );
 }
+ExpandedCard.propTypes = {
+    details: propTypes.object.isRequired,
+    viewCard: propTypes.func.isRequired,
+};

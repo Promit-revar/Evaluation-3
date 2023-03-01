@@ -5,6 +5,7 @@ import { getFormattedDateFromUtcDate } from '../../utils/dateFormat';
 import './eventCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ThemeContext } from '../../contexts/themeContext';
+import propTypes from 'prop-types';
 //import PropTypes from 'prop-types';
 
 import axios from 'axios';
@@ -60,4 +61,8 @@ export default function EventCardComponent(props){
       </div>
     </div>
   );
+};
+EventCardComponent.propTypes = {
+    event: propTypes.object,
+    viewCard: propTypes.func
 };

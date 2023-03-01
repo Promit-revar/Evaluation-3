@@ -2,6 +2,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter, faChevronUp, faMagnifyingGlass, faCircle, faCircleDot } from '@fortawesome/free-solid-svg-icons';
+import propTypes from 'prop-types';
 import './searchFilter.css';
 
 export default function SearchFilterComponent(props){
@@ -49,3 +50,6 @@ export default function SearchFilterComponent(props){
         
 )
     };
+SearchFilterComponent.propTypes = {
+    searchFunction: propTypes.func.isRequired,
+};
