@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@700&display=swap');
+footer{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+    gap:2%;
+}
+.theme-purple{
+    background-color: purple;
+}
+.theme-black{
+    background-color: #000;
+}
+.theme-blue{
+    background-color: #00f;
+}
+.theme-gray{
+    background-color: #ccc;
+}
+.theme-box{
+    border: 1px solid #fff;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+.save-theme-btn{
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+}
