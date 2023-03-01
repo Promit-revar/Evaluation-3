@@ -1,0 +1,42 @@
+.filter{
+    display: flex;
+    flex-direction: row;
+    
+}
+.search-filter{
+    display: flex;
+    flex-direction: row;
+    gap: 80%;
+    padding-top: 20px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+}
+.filter-type{
+    display: flex;
+    flex-direction: row;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+.reg{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;   
+}
+.reg p{
+    white-space: nowrap;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+}

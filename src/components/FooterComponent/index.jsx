@@ -6,13 +6,13 @@ import makeRequest from '../../utils/makeRequest';
 import setThemeRequest from '../../endpoints/setTheme';
 export default function FooterComponent(){
     const { theme, setTheme } = React.useContext(ThemeContext);
-    console.log(theme);
+    //console.log(theme);
     if(theme['themes']){
     const setThemeHandler=async()=>{
         const reqData = theme.themes.findIndex((item)=>item.colorHexCode===theme.currTheme);
         console.log(reqData)
        const result=await makeRequest(setThemeRequest,{preferredThemeId:reqData}); 
-       console.log(result);
+      console.log(result);
     }
     const handleThemeChange=(e)=>{
         setTheme({...theme,currTheme:e.target.id});  
