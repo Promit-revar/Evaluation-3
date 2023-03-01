@@ -7,7 +7,7 @@ import getThemes from './endpoints/getTheme.json';
 import CardComponent from './components/CardComponent';
 import { ThemeContext } from './contexts/themeContext';
 import {EventContextProvider} from './contexts/dataEventContext';
-import SearchFilterComponent from './components/searchAndFilterComponent';
+
 function App() {
   const { theme, setTheme } = React.useContext(ThemeContext);
   
@@ -24,7 +24,6 @@ function App() {
     <div className="App">
       <HeaderComponent />
       <EventContextProvider>
-      <SearchFilterComponent />
       <CardComponent />
       </EventContextProvider>
       <FooterComponent />

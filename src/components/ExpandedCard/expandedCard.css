@@ -1,0 +1,97 @@
+.event-card-expanded {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.26);
+    color: white;
+  }
+  
+  .event-card-image-expanded img{
+    width: 400px;
+    height: 350px;
+    border-bottom: 0.5px solid white;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .event-card-content-expanded {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .event-card-content-name-expanded {
+    height: 60px;
+    font-family: 'Big Shoulders Text', cursive;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .event-card-content-description-expanded {
+    height: 70px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+  .event-card-content-venue-expanded {
+    height: 20px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .event-card-content-date-expanded {
+    height: 20px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .event-card-footer-expanded {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .event-card-footer-expanded .bookmarked {
+    color: #EA8282;
+  }
+  
+  .event-card-footer-expanded .unbookmarked {
+    color: white;
+  }
+  .checked{
+    color: #A0F3AD ;
+  }
+  .unchecked{
+    color: white;
+  }
+  .btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    
+  }
+.btn button{
+        padding: 10px 20px;
+        background-color: #ffffff;
+        border-radius: 15px;
+    }

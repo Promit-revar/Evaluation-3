@@ -14,7 +14,7 @@ export default function EventCardComponent(props){
     //console.log(props.event);
   const [book, setBook] = React.useState(props.event.isBookmarked);
   const [register, setRegister] = React.useState(props.event.isRegistered);
-
+   // console.log(props.event);
   const clickBookmarkHandler = () => {
     
     axios.patch(`http://localhost:8000/api/events/${props.event.id}`, { isBookmarked: !book }).then(response => {
@@ -31,8 +31,8 @@ export default function EventCardComponent(props){
 
   return (
     <div className='event-card' style={{backgroundColor:theme['currTheme']}}>
-      <div className='event-card-image'>
-        <img src={props.event.imgUrl} alt={props.event.name} />
+      <div className='event-card-image' >
+        <img src={props.event.imgUrl} alt={props.event.name} onClick={()=>props.viewCard(props.event)}/>
       </div>
       <div className='event-card-content'>
         <p className='event-card-content-name'>{props.event.name}</p>
@@ -51,6 +51,7 @@ export default function EventCardComponent(props){
           className={register ? 'checked' : 'unchecked'}
           onClick={registerEventHandler}
         />
+        {(register)?<span className='checked'>Registered</span>:null}
         <FontAwesomeIcon
           icon={faBookmark}
           className={book ? 'bookmarked' : 'unbookmarked'}
