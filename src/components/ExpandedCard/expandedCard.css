@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 400px;
-    height: 600px;
+    height: 700px;
     border: 1px solid #ccc;
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.26);
@@ -18,7 +18,7 @@
   }
   
   .event-card-content-expanded {
-    height: 150px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     padding-left: 5px;
@@ -26,27 +26,25 @@
   }
   
   .event-card-content-name-expanded {
-    height: 60px;
+    height: 50px;
     font-family: 'Big Shoulders Text', cursive;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
   }
   
   .event-card-content-description-expanded {
-    height: 70px;
+    height: 175px;
     font-family: 'Sofia Sans', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
-    text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    overflow: hidden;
     margin-bottom: 10px;
   }
   
   .event-card-content-venue-expanded {
-    height: 20px;
+    height: 10px;
     font-family: 'Sofia Sans', sans-serif;
     font-size: 20px;
     text-align: center;

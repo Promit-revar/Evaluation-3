@@ -23,7 +23,7 @@ export default function EventCardComponent(props){
     
   };
   const registerEventHandler = () => {
-    console.log(!register)
+    //console.log(!register)
     axios.patch(`http://localhost:8000/api/events/${props.event.id}`, { isRegistered: !register }).then(response => {
   }).catch(error => console.log(error));
     setRegister(!register);

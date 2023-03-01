@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter, faChevronUp, faMagnifyingGlass, faCircle, faCircleDot } from '@fortawesome/free-solid-svg-icons';
 import './searchFilter.css';
 
-export default function SearchFilterComponent(){
-    
+export default function SearchFilterComponent(props){
+    const handleSearch = (e) => {
+        props.searchFunction(e.target.value);
+    }
     return(
         <div className="search-filter">
             <div className='left'>
@@ -26,7 +28,7 @@ export default function SearchFilterComponent(){
             </div>
             <div className='right'>
                 <div className='search'>
-                    <input type="text" placeholder="Search" />
+                    <input type="text" placeholder="Search" onChange={handleSearch}/>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </div>
                 <div className='reg'>
