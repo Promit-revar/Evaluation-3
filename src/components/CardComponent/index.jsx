@@ -23,7 +23,7 @@ export default function CardComponent() {
     setCard(event);
   }
   const handleSearch = (searchText) => {
-    setFilteredEvents([...events.filter((data) => data.name.search(searchText) != -1 || data.description.search(searchText) != -1)]);
+    setFilteredEvents([...events.filter((data) =>data.name.toLowerCase().includes(searchText.toLowerCase()))]);
   }
   if(Object.keys(card).length === 0){
   return (
